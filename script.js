@@ -81,6 +81,8 @@ document.querySelector('.check').addEventListener('click', function () {
       score--;
       document.querySelector('.score').textContent = score;
     } else {
+      document.querySelector('body').style.backgroundColor = '#F72331';
+      document.querySelector('h1').textContent = '😬😬You Lost The Game!😬😬';
       document.querySelector('.message').textContent = '😬You Lost The Game!';
     }
   }
