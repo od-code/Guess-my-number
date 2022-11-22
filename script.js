@@ -91,7 +91,7 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   score = 20;
-  displayMessage('Start guessing');
+  displayMessage('Start guessing...');
   document.querySelector('.guess').value = '';
   document.querySelector('h1').textContent = 'Guess My Number!';
   document.querySelector('.score').textContent = '20';
