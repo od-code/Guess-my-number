@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   color: #eee;
-  background-color: #222;
+  background-color: #000;
   /* background-color: #60b347; */
 }
 
@@ -22,36 +22,37 @@ body {
 header {
   position: relative;
   height: 35vh;
-  border-bottom: 7px solid #eee;
+  border-bottom: 2px solid #ff4da6;
 }
 
 main {
   height: 65vh;
   color: #eee;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-around;
 }
 
 .left {
-  width: 52rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 3rem 4rem 0 16rem;
+  border-right: 1px solid #ff4da6;
 }
-
 .right {
-  width: 52rem;
-  font-size: 2rem;
+  /* padding: 7rem 13rem 0; */
+  display: grid;
+  place-content: center;
 }
-
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 52%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -59,15 +60,12 @@ h1 {
 .number {
   background: #eee;
   color: #333;
-  font-size: 6rem;
-  width: 15rem;
-  padding: 3rem 0rem;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  border-radius: 1.7em 0.8em;
+  font-size: 10rem;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .between {
@@ -81,7 +79,6 @@ h1 {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  border-radius: 0.5em;
 }
 
 .guess {
@@ -95,7 +92,6 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
-  border-radius: 0.5em;
 }
 
 .btn {
@@ -106,7 +102,6 @@ h1 {
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
-  border-radius: 0.5em;
 }
 
 .btn:hover {
@@ -114,10 +109,32 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
-  height: 3rem;
+  margin-bottom: 4rem;
+  font-size: 3rem;
 }
 
+.label-highscore,
 .label-score {
   margin-bottom: 2rem;
+  font-size: 2rem;
+}
+/* The glowing text  */
+.glow {
+  font-size: 70px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
