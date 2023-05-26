@@ -1,6 +1,6 @@
 "use strict";
 const randomNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector(".number").textContent = randomNumber;
+// document.querySelector(".number").textContent = randomNumber;
 console.log(randomNumber);
 let scoreValue = document.querySelector(".score").textContent;
 
@@ -17,24 +17,23 @@ document.querySelector(".check").addEventListener("click", function () {
   } else if (number === randomNumber) {
     document.querySelector(".message").textContent = "🎉Correct Number";
     document.querySelector(".score").textContent = score;
-    document.querySelector(".highscore").textContent = 20;
+    document.querySelector(".highscore").textContent = score;
     // The guess is incorrect
-  } else if (number !== randomNumber) {
+  } else if (number !== randomNumber && score > 0) {
     // The guess is low
     if (number < randomNumber) {
       document.querySelector(".message").textContent = "📉Too Low!!";
-      document.querySelector(".score").textContent = score - 1;
       score--;
+      document.querySelector(".score").textContent = score;
 
       // the guess is high
     } else if (number > randomNumber) {
       document.querySelector(".message").textContent = "📈Too High!!";
-      document.querySelector(".score").textContent = score - 1;
       score--;
+      document.querySelector(".score").textContent = score;
     }
     if (document.querySelector(".score").textContent == 0) {
-      document.querySelector(".message").textContent =
-        "😔😔 You've lost the game";
+      document.querySelector(".message").textContent = "😔You've lost the game";
     }
   }
 });

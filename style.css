@@ -26,7 +26,7 @@ header {
 }
 
 main {
-  height: 65vh;
+  /* height: 65vh; */
   color: #eee;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,7 +38,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 3rem 4rem 0 16rem;
+  padding: 3rem 4rem;
   border-right: 1px solid #ff4da6;
 }
 .right {
@@ -58,8 +58,9 @@ h1 {
 }
 
 .number {
-  background: #eee;
-  color: #333;
+  border: 3px solid #ff4da6;
+
+  box-shadow: 0 4px 8px 0 #e60073, 0 6px 20px 0 #e60073;
   font-size: 10rem;
   width: 30rem;
   height: 30rem;
@@ -109,8 +110,9 @@ h1 {
 }
 
 .message {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   font-size: 3rem;
+  width: 100%;
 }
 
 .label-highscore,
